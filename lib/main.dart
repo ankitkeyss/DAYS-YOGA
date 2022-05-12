@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yoga_apps/screens/home.dart';
+import 'package:yoga_apps/screens/startup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home:  Starrup(),
     );
   }
 }
