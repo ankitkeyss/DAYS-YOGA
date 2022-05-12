@@ -147,11 +147,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image: NetworkImage(
                                                       "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80"))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
@@ -196,11 +204,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image: NetworkImage(
                                                       "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
@@ -245,11 +261,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image: NetworkImage(
                                                       "https://images.unsplash.com/photo-1573590330099-d6c7355ec595?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
@@ -303,11 +327,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image: NetworkImage(
                                                       "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
@@ -341,16 +373,30 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                         Container(
                                           height: 150,
                                           decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.only(
+                                                  bottomRight:
+                                                  Radius.circular(60),
+                                                  topLeft: Radius.circular(20),),
+                                                  //  bottomLeft: Radius.circular(20),)
+
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
                                                   image: NetworkImage(
                                                       "https://media.istockphoto.com/photos/young-woman-in-yoga-pose-using-laptop-at-home-picture-id1334071264?b=1&k=20&m=1334071264&s=170667a&w=0&h=0wnQzJJJIA5NMo6dOmVepS6mXC0eqLjI26ADDlIK4Lg="))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
@@ -395,11 +441,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image: NetworkImage(
                                                       "https://images.unsplash.com/photo-1556816723-1ce827b9cfbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80"))),
                                         ),
-                                        // Container(
-                                        //
-                                        //   height: 150,
-                                        //   color: Colors.black26,
-                                        // ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black26,
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight:
+                                              Radius.circular(60),
+                                              topLeft: Radius.circular(20),
+                                              //  bottomLeft: Radius.circular(20),
+                                            ),),
+
+                                          height: 150,
+
+                                        ),
                                         Positioned(
                                           right: 20,
                                           left: 10,
