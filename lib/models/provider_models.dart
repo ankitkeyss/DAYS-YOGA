@@ -27,6 +27,7 @@ class WorkoutDetails with ChangeNotifier {
     Workout_Details(context);
   }
   int countdown = 3;
+
   Workout_Details(context) async {
     Timer.periodic(Duration(seconds: 1), (timer) {
       countdown--;
@@ -39,10 +40,21 @@ class WorkoutDetails with ChangeNotifier {
       notifyListeners();
     });
   }
+
+  bool visible = false;
+  void show() {
+    visible = true;
+    notifyListeners();
+  }
+
+  void hide() {
+    visible = false;
+    notifyListeners();
+  }
 }
 
 class Breaks with ChangeNotifier {
-  Breaks(context){
+  Breaks(context) {
     breakdetails(context);
   }
   int countdown = 20;
