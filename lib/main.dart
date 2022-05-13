@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home:  Starrup(),
+    //  home:  Starrup(),
+      home:  Home(),
     );
   }
 }

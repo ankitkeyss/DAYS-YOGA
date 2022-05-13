@@ -1,27 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:yoga_apps/screens/r_u_ready.dart';
 
-class Starrup extends StatefulWidget {
-  const Starrup({Key? key}) : super(key: key);
+class Start_UP extends StatefulWidget {
+  const Start_UP({Key? key}) : super(key: key);
 
   @override
-  State<Starrup> createState() => _StarrupState();
+  State<Start_UP> createState() => _StarrupState();
 }
 
-class _StarrupState extends State<Starrup> {
+class _StarrupState extends State<Start_UP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: ElevatedButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>rUready()));
+        },
+        style: ElevatedButton.styleFrom(
+            primary: Colors.blueGrey,
+            textStyle: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold)),
+        child: Text("Start",),),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             expandedHeight: 300,
            pinned: true,
+           backgroundColor: Colors.blueGrey,
            // title: Text("AppBar"),
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.network("https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1099&q=80",fit: BoxFit.cover,),
-               title: Text("Yoga for begginers"),
+              background: Image.asset("assets/img/14.jpg",fit: BoxFit.cover,),
+               title: Text("EXERCISE !"),
             ),
-            leading: Icon(Icons.backup_sharp),
+         //   leading: Icon(Icons.backup_sharp),
             actions: [
               IconButton(
                   onPressed: () {}, icon: Icon(Icons.thumb_down_alt_rounded))
@@ -39,9 +51,18 @@ class _StarrupState extends State<Starrup> {
                       ],
                     ),
                     Divider(thickness: 2,),
-                    ListView.separated(shrinkWrap: true,physics:NeverScrollableScrollPhysics(),
-                        separatorBuilder: (context,index)=>Divider(thickness: 2,),itemBuilder: (context, index)=>
-                            ListTile(title: Text("Yoga ${index}"),), itemCount: 10)
+                    ListView.separated(
+                        shrinkWrap: true,
+                        physics:NeverScrollableScrollPhysics(),
+                        separatorBuilder: (context,index)=>Divider(thickness: 2,),
+                        itemBuilder: (context, index)=>
+                            ListTile(
+                              leading:Image.network("https://i.gifer.com/J0jR.gif",fit: BoxFit.cover,height: 70,width: 70) ,
+                              title: Text("Yoga ${index}"),
+                              subtitle: Text((index%2==0)?"00:20":"x20")
+
+                            ),
+                      itemCount: 10,)
                   ],
                 ),
               ),

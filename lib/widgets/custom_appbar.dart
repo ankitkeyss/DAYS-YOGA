@@ -36,12 +36,12 @@ class CustomAppBar extends StatelessWidget {
           elevation: 0,
           title: Row(
             children: [
-              Text("DAYS  " , style: TextStyle(
+              Text("OUR  " , style: TextStyle(
                   color: iconTween.value,
                   fontWeight: FontWeight.bold,
                   fontSize: 20
               ),),
-              Text("YOGA", style: TextStyle(
+              Text("EXERCISE", style: TextStyle(
                   color: yogaTween.value,
                   fontWeight: FontWeight.bold,
                   fontSize: 20

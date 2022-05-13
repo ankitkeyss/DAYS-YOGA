@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yoga_apps/screens/startup.dart';
 import 'package:yoga_apps/widgets/custom_appbar.dart';
 import 'package:yoga_apps/widgets/custom_drawer.dart';
 
@@ -124,67 +125,72 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                       padding: EdgeInsets.only(bottom: 15),
                                       width: MediaQuery.of(context).size.width,
                                       child: Text(
-                                        "Yoga For All",
+                                        "Exercise For All",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold),
                                       )),
-                                  Container(
-                                    margin: EdgeInsets.only(bottom: 20),
-                                    child: Stack(
-                                      children: [
-                                        Container(
-                                          height: 150,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context,)=>Start_UP()));
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.only(bottom: 20),
+                                      child: Stack(
+                                        children: [
+                                          Container(
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.only(
+                                                  bottomRight:
+                                                      Radius.circular(60),
+                                                  topLeft: Radius.circular(20),
+                                                  //  bottomLeft: Radius.circular(20),
+                                                ),
+                                                image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                  image: AssetImage("assets/img/1.jpg"),
+                                                     )),
+                                          ),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.black26,
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
-                                                    Radius.circular(60),
+                                                Radius.circular(60),
                                                 topLeft: Radius.circular(20),
                                                 //  bottomLeft: Radius.circular(20),
-                                              ),
-                                              image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80"))),
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            color: Colors.black26,
-                                            borderRadius: BorderRadius.only(
-                                              bottomRight:
-                                              Radius.circular(60),
-                                              topLeft: Radius.circular(20),
-                                              //  bottomLeft: Radius.circular(20),
-                                            ),),
+                                              ),),
 
-                                          height: 150,
+                                            height: 150,
 
-                                        ),
-                                        Positioned(
-                                          right: 20,
-                                          left: 10,
-                                          top: 10,
-                                          child: Text(
-                                            "Yoga For Begineers",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 18),
                                           ),
-                                        ),
-                                        Positioned(
-                                          right: 30,
-                                          left: 12,
-                                          top: 38,
-                                          child: Text(
-                                            "Last Time : 2 Feb",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 10),
+                                          Positioned(
+                                            right: 20,
+                                            left: 10,
+                                            top: 10,
+                                            child: Text(
+                                              "Exercise For Begineers",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 18),
+                                            ),
                                           ),
-                                        )
-                                      ],
+                                          Positioned(
+                                            right: 30,
+                                            left: 12,
+                                            top: 38,
+                                            child: Text(
+                                              "Last Time : 2 Feb",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -202,8 +208,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               ),
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
+                                                  image:  AssetImage("assets/img/7.jpg"))),
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
@@ -223,7 +228,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           left: 10,
                                           top: 10,
                                           child: Text(
-                                            "Weight Loss Yoga",
+                                            "Weight Loss Exercise",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
@@ -259,8 +264,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               ),
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://images.unsplash.com/photo-1573590330099-d6c7355ec595?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
+                                                  image:  AssetImage("assets/img/17.jpg") )),
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
@@ -280,7 +284,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           left: 10,
                                           top: 10,
                                           child: Text(
-                                            "Suryanamaskar",
+                                            "Suryanamaskar Exercise",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
@@ -325,8 +329,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               ),
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"))),
+                                                  image:  AssetImage("assets/img/2.jpg"))),
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
@@ -346,7 +349,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           left: 10,
                                           top: 10,
                                           child: Text(
-                                            "Power Yoga",
+                                            "Power Exercise",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
@@ -382,8 +385,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://media.istockphoto.com/photos/young-woman-in-yoga-pose-using-laptop-at-home-picture-id1334071264?b=1&k=20&m=1334071264&s=170667a&w=0&h=0wnQzJJJIA5NMo6dOmVepS6mXC0eqLjI26ADDlIK4Lg="))),
+                                                  image: AssetImage("assets/img/15.jpg")
+                                              )),
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
@@ -403,7 +406,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           left: 10,
                                           top: 10,
                                           child: Text(
-                                            "Breathing Yoga",
+                                            "Breathing Exercise",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
@@ -439,8 +442,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               ),
                                               image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: NetworkImage(
-                                                      "https://images.unsplash.com/photo-1556816723-1ce827b9cfbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80"))),
+                                                  image: AssetImage("assets/img/18.jpg")
+                                              )),
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
@@ -460,7 +463,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           left: 10,
                                           top: 10,
                                           child: Text(
-                                            "Increase Flexibility",
+                                            "Increase Flexibility Exercise",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
