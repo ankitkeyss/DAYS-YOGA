@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:yoga_apps/screens/break.dart';
+import 'package:yoga_apps/screens/finish.dart';
 import 'package:yoga_apps/screens/workout_details.dart';
 
 class TimerModel with ChangeNotifier {
@@ -26,7 +27,7 @@ class WorkoutDetails with ChangeNotifier {
   WorkoutDetails(context) {
     Workout_Details(context);
   }
-  int countdown = 3;
+  int countdown = 10;
 
   Workout_Details(context) async {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -57,14 +58,14 @@ class Breaks with ChangeNotifier {
   Breaks(context) {
     breakdetails(context);
   }
-  int countdown = 20;
+  int countdown = 10;
   breakdetails(context) async {
     Timer.periodic(Duration(seconds: 1), (timer) {
       countdown--;
       if (countdown == 0) {
         timer.cancel();
         // timer.cancel();
-        //Navigator.push(context, MaterialPageRoute(builder: (context)=>WorkoutDetails(context)));
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>Finish()));
       }
       notifyListeners();
     });

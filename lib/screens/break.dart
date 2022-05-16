@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:yoga_apps/models/provider_models.dart';
+import 'package:yoga_apps/providers/provider_models.dart';
 
 class Break extends StatelessWidget {
   const Break({Key? key}) : super(key: key);
