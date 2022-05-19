@@ -18,7 +18,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   void initState() {
     _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 0));
+        AnimationController(vsync: this, duration: const Duration(seconds: 0));
     _colorTween = ColorTween(begin: Colors.transparent, end: Colors.white)
         .animate(_animationController);
     _iconTween = ColorTween(begin: Colors.white, end: Colors.blueGrey)
@@ -30,7 +30,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     _yogaTween = ColorTween(begin: Colors.white, end: Colors.black)
         .animate(_animationController);
     _textAnimationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 0));
+        AnimationController(vsync: this, duration: const Duration(seconds: 0));
     super.initState();
   }
 
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer: Custome_Drawer(),
+      drawer: const Custome_Drawer(),
       backgroundColor: Colors.white,
       body: NotificationListener(
         onNotification: scrollListner,
@@ -65,10 +65,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.fromLTRB(50, 100, 50, 20),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.fromLTRB(50, 100, 50, 20),
+                              decoration: const BoxDecoration(
                                   color: Colors.blueGrey,
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius:  BorderRadius.only(
                                       bottomRight: Radius.circular(13),
                                       bottomLeft: Radius.circular(13))),
                               child: Row(
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   Column(
-                                    children: [
+                                    children: const [
                                       Text(
                                         "1",
                                         style: TextStyle(
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ],
                                   ),
                                   Column(
-                                    children: [
+                                    children: const [
                                       Text(
                                         "120",
                                         style: TextStyle(
@@ -102,7 +102,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ],
                                   ),
                                   Column(
-                                    children: [
+                                    children: const [
                                       Text(
                                         "26",
                                         style: TextStyle(
@@ -118,13 +118,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.all(20),
+                              margin: const EdgeInsets.all(20),
                               child: Column(
                                 children: [
                                   Container(
-                                      padding: EdgeInsets.only(bottom: 15),
+                                      padding: const EdgeInsets.only(bottom: 15),
                                       width: MediaQuery.of(context).size.width,
-                                      child: Text(
+                                      child: const Text(
                                         "Exercise For All",
                                         style: TextStyle(
                                             fontSize: 16,
@@ -132,15 +132,15 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                       )),
                                   InkWell(
                                     onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context,)=>Start_UP()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context,)=>const Start_UP()));
                                     },
                                     child: Container(
-                                      margin: EdgeInsets.only(bottom: 20),
+                                      margin: const EdgeInsets.only(bottom: 20),
                                       child: Stack(
                                         children: [
                                           Container(
                                             height: 150,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                                 color: Colors.white,
                                                 borderRadius: BorderRadius.only(
                                                   bottomRight:
@@ -154,7 +154,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                      )),
                                           ),
                                           Container(
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Colors.black26,
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
@@ -166,7 +166,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                             height: 150,
 
                                           ),
-                                          Positioned(
+                                          const Positioned(
                                             right: 20,
                                             left: 10,
                                             top: 10,
@@ -178,7 +178,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   fontSize: 18),
                                             ),
                                           ),
-                                          Positioned(
+                                          const Positioned(
                                             right: 30,
                                             left: 12,
                                             top: 38,
@@ -194,12 +194,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 20),
                                     child: Stack(
                                       children: [
                                         Container(
                                           height: 150,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
                                                     Radius.circular(60),
@@ -211,7 +211,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image:  AssetImage("assets/img/7.jpg"))),
                                         ),
                                         Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.black26,
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
@@ -223,7 +223,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           height: 150,
 
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 20,
                                           left: 10,
                                           top: 10,
@@ -235,7 +235,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                 fontSize: 18),
                                           ),
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 30,
                                           left: 12,
                                           top: 38,
@@ -250,12 +250,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 20),
                                     child: Stack(
                                       children: [
                                         Container(
                                           height: 150,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
                                                     Radius.circular(60),
@@ -267,7 +267,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image:  AssetImage("assets/img/17.jpg") )),
                                         ),
                                         Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.black26,
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
@@ -279,7 +279,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           height: 150,
 
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 20,
                                           left: 10,
                                           top: 10,
@@ -291,7 +291,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                 fontSize: 18),
                                           ),
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 30,
                                           left: 12,
                                           top: 38,
@@ -306,21 +306,21 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(bottom: 15),
+                                      padding: const EdgeInsets.only(bottom: 15),
                                       width: MediaQuery.of(context).size.width,
-                                      child: Text(
+                                      child: const Text(
                                         "Choose Your Type",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold),
                                       )),
                                   Container(
-                                    margin: EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 20),
                                     child: Stack(
                                       children: [
                                         Container(
                                           height: 150,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
                                                     Radius.circular(60),
@@ -332,7 +332,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                   image:  AssetImage("assets/img/2.jpg"))),
                                         ),
                                         Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.black26,
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
@@ -344,7 +344,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           height: 150,
 
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 20,
                                           left: 10,
                                           top: 10,
@@ -356,7 +356,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                 fontSize: 18),
                                           ),
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 30,
                                           left: 12,
                                           top: 38,
@@ -371,12 +371,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 20),
                                     child: Stack(
                                       children: [
                                         Container(
                                           height: 150,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                                 borderRadius: BorderRadius.only(
                                                   bottomRight:
                                                   Radius.circular(60),
@@ -389,7 +389,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               )),
                                         ),
                                         Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.black26,
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
@@ -401,7 +401,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           height: 150,
 
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 20,
                                           left: 10,
                                           top: 10,
@@ -413,7 +413,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                 fontSize: 18),
                                           ),
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 30,
                                           left: 12,
                                           top: 38,
@@ -428,12 +428,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 20),
                                     child: Stack(
                                       children: [
                                         Container(
                                           height: 150,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
                                                     Radius.circular(60),
@@ -446,7 +446,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                               )),
                                         ),
                                         Container(
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.black26,
                                             borderRadius: BorderRadius.only(
                                               bottomRight:
@@ -458,7 +458,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                           height: 150,
 
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 20,
                                           left: 10,
                                           top: 10,
@@ -470,7 +470,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                 fontSize: 18),
                                           ),
                                         ),
-                                        Positioned(
+                                        const Positioned(
                                           right: 30,
                                           left: 12,
                                           top: 38,
